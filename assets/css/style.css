@@ -1,0 +1,693 @@
+
+/*
+-section che equivale all'header o barra funzione fatta per tutti i dispositivi
+-il resto è fatto solo sul desktop:
+ sopra una presentazione con un gran titolo
+ sotto la section tre box centrati orizzontalmente e spaziati in altezza sp.btw
+ sotto footer ancora impostato con i miei link
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*vertical mobile*/
+@media only screen and (max-width: 480px)
+{
+  .section
+  {
+    /*imposta il colore di sfondo su un grigio scuro*/
+    /*sets background color to dark grey */
+    background-color: #212121; 
+    /* aggiunge un'ombra nera con spostamento e sfocatura
+    adds a black shadow with offset and blur */
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 1); 
+    /* posizione fissa, l'elemento rimane visibile durante lo scrolling 
+    fixed position, element stays visible while scrolling */
+    position: fixed; 
+     /* larghezza al 100% della finestra
+    width set to 100% of the viewport */
+    width: 100%;
+    /* posiziona l'elemento sopra altri elementi con z-index più basso
+    positions the element above others with a lower z-index */
+    z-index: 1; 
+  }
+  .section ul 
+  {
+    /* rimuove il margine predefinito del <ul>
+    removes the default margin of the <ul> */
+    margin: 0;
+    /* rimuove il padding predefinito del <ul>
+    removes the default padding of the <ul> */
+    padding: 0; 
+    /* rimuove i puntini dalla lista
+    removes bullet points from the list */
+    list-style-type: none; 
+    /* nasconde il contenuto che esce dall'elemento
+    hides overflow content */
+    overflow: hidden;
+    /* imposta il colore di sfondo su grigio scuro
+    sets background color to dark grey */
+    background-color: #212121; 
+  }
+  .section ul a 
+  { 
+    /* rende l'elemento <a> un blocco
+    makes the <a> element a block-level element */
+    display: block; 
+    /* aggiunge padding di 20px attorno all'elemento
+    adds 20px padding around the element */
+    padding: 20px;
+    /* aggiunge un bordo destro rosso
+    adds a red right border */
+    border-right: 1px solid red; 
+  }
+  .section ul a:hover 
+  { 
+    /* cambia il colore di sfondo su hover
+    changes background color on hover */
+    background-color: #181818;
+  }
+  .section .logo
+  { 
+    /* posiziona il logo a sinistra
+    positions the logo to the left */
+    float: left; 
+    /* imposta la dimensione del testo a 25px
+    sets font size to 25px */
+    font-size: 25px; 
+    /*cambia il font del logo
+    changes font logo */
+    font-family: 'Great Vibes', cursive;
+    /* aggiunge padding sopra/sotto di 10px e ai lati di 20px
+    adds 10px top/bottom and 20px side padding */
+    padding: 13px 20px 8px 30px; 
+  }  
+  .section .menu 
+  {
+    /* impedisce che gli elementi precedenti flottino vicino
+    clears floats from preceding elements */
+    clear: both; 
+    /* imposta l'altezza massima a 0 per nascondere il menu
+    sets max height to 0 to hide the menu */
+    max-height: 0; 
+    /* transizione per il cambiamento di altezza
+    transition for height change */
+    transition: max-height .2s ease-in-out; 
+  }
+  .section .menu-icon 
+  {
+    /* bordo rosso di 1px 
+    1px solid red border */
+    border: 1px solid rgb(255, 252, 252); 
+    /* padding di 28px sopra/sotto e 20px ai lati
+    28px top/bottom and 20px side padding */
+    padding: 28px 20px; 
+    /* posizionamento relativo per controlli interni
+    relative positioning for inner controls */
+    position: relative; 
+    /* posiziona l'icona del menu a destra
+    positions the menu icon to the right */
+    float: right;
+    /* cambia il cursore in "mano" quando si passa sopra
+    changes cursor to pointer when hovering */
+    cursor: pointer; 
+  }  
+  .section .menu-icon .nav-icon 
+  {
+    /* imposta il colore di sfondo a grigio
+    sets background color to gray */
+    background-color: gray;
+    /* rende l'icona un blocco
+    makes the icon a block element */
+    display: block; 
+    /* larghezza di 18px per la barra dell'icona
+    18px width for the icon bar */
+    width: 18px; 
+    /* altezza di 2px per una barra sottile
+    2px height for a thin bar */
+    height: 2px; 
+    /* posizione relativa rispetto al contenitore
+    relative positioning inside the container */
+    position: relative; 
+    /* transizione graduale del colore di sfondo
+    smooth transition of background color */
+    transition: background-color .2s ease-out; 
+  }
+  .section .menu-icon .nav-icon::before 
+  {
+    /* colore di sfondo grigio per la barra superiore
+    gray background for the top bar */
+    background-color: gray; 
+    /* crea contenuto vuoto per lo pseudo-elemento
+    creates empty content for the pseudo-element */
+    content: ""; 
+    /* rende lo pseudo-elemento un blocco
+    makes the pseudo-element a block */
+    display: block;
+    /* altezza al 100% dell'icona
+    sets height to 100% of the icon */
+    height: 100%; 
+    /* larghezza al 100% dell'icona 
+    sets width to 100% of the icon */
+    width: 100%; 
+    /* transizione graduale su tutte le proprietà
+    smooth transition on all properties */
+    transition: all .2s ease-out; 
+    /* posizione assoluta rispetto all'icona
+    absolutely positions relative to the icon */
+    position: absolute; 
+    /* sposta la barra verso il basso di 5px
+    moves the bar 5px down */
+    top: 5px; 
+  }
+  .section .menu-icon .nav-icon::after 
+  {
+    /* colore di sfondo grigio per la barra inferiore
+    gray background for the bottom bar */
+    background-color: gray; 
+    /* crea contenuto vuoto per lo pseudo-elemento
+    creates empty content for the pseudo-element */
+    content: ""; 
+    /* rende lo pseudo-elemento un blocco
+    makes the pseudo-element a block */
+    display: block; 
+    /* altezza al 100% dell'icona
+    sets height to 100% of the icon */
+    height: 100%; 
+    /* larghezza al 100% dell'icona
+    sets width to 100% of the icon */
+    width: 100%;
+    /* transizione graduale su tutte le proprietà
+    smooth transition on all properties */
+    transition: all .2s ease-out;
+    /* posizione assoluta rispetto all'icona
+    absolutely positions relative to the icon */
+    position: absolute; 
+    /* sposta la barra verso l'alto di 5px
+    moves the bar 5px up */
+    top: -5px; 
+  }
+  .section .menu-btn 
+  { 
+    /* nasconde il checkbox del pulsante menu 
+    hides the menu button checkbox */
+    display: none;
+  }
+  
+  .section .menu-btn:checked ~ .menu 
+  {
+    /* imposta l'altezza massima del menu a 240px quando selezionato
+    sets max height to 240px when checked */
+    max-height: 240px; 
+  }
+  
+  .section .menu-btn:checked ~ .menu-icon .nav-icon 
+  {
+    /* rende trasparente l'icona del menu
+    makes the menu icon transparent */
+    background-color: transparent; 
+  }
+  
+  .section .menu-btn:checked ~ .menu-icon .nav-icon::before 
+  {
+    /* ruota la barra superiore di -45 gradi per formare una croce
+    rotates the top bar by -45 degrees to form a cross */
+    transform: rotate(-45deg); 
+    /* posiziona la barra superiore al centro
+    positions the top bar at the center */
+    top: 0; 
+  }
+  
+  .section .menu-btn:checked ~ .menu-icon .nav-icon::after
+  {
+    /* ruota la barra inferiore di 45 gradi per completare la
+    rotates the bottom bar by 45 degrees to complete the crosscroce */
+    transform: rotate(45deg); 
+    /* posiziona la barra inferiore al centro
+    positions the bottom bar at the center */
+    top: 0; 
+  }
+}
+/*orizzontal mobile*/
+@media only screen and (min-width: 481px) and (max-width:800px)
+{
+  .section
+  {
+    /*imposta il colore di sfondo su un grigio scuro*/
+    /*sets background color to dark grey */
+    background-color: #212121; 
+    /* aggiunge un'ombra nera con spostamento e sfocatura
+    adds a black shadow with offset and blur */
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 1); 
+    /* posizione fissa, l'elemento rimane visibile durante lo scrolling 
+    fixed position, element stays visible while scrolling */
+    position: fixed; 
+     /* larghezza al 100% della finestra
+    width set to 100% of the viewport */
+    width: 100%;
+    /* posiziona l'elemento sopra altri elementi con z-index più basso
+    positions the element above others with a lower z-index */
+    z-index: 1; 
+  }
+  .section ul 
+  {
+    /* rimuove il margine predefinito del <ul>
+    removes the default margin of the <ul> */
+    margin: 0;
+    /* rimuove il padding predefinito del <ul>
+    removes the default padding of the <ul> */
+    padding: 0; 
+    /* rimuove i puntini dalla lista
+    removes bullet points from the list */
+    list-style-type: none; 
+    /* nasconde il contenuto che esce dall'elemento
+    hides overflow content */
+    overflow: hidden;
+    /* imposta il colore di sfondo su grigio scuro
+    sets background color to dark grey */
+    background-color: #212121; 
+  }
+  .section ul a 
+  { 
+    /* rende l'elemento <a> un blocco
+    makes the <a> element a block-level element */
+    display: block; 
+    /* aggiunge padding di 20px attorno all'elemento
+    adds 20px padding around the element */
+    padding: 20px;
+    /* aggiunge un bordo destro rosso
+    adds a red right border */
+    border-right: 1px solid red; 
+    /* rimuove la sottolineatura del link
+    removes the underline from the link */
+    text-decoration: none; 
+  }
+  
+  .section ul a:hover 
+  { 
+    /* cambia il colore di sfondo su hover
+    changes background color on hover */
+    background-color: #181818;
+  }
+  .section .logo
+  { 
+    /* posiziona il logo a sinistra
+    positions the logo to the left */
+    float: left; 
+    /* imposta la dimensione del testo a 25px
+    sets font size to 25px */
+    font-size: 25px; 
+    /*cambia il font del logo
+    changes font logo */
+    font-family: 'Great Vibes', cursive;
+    /* aggiunge padding sopra/sotto di 10px e ai lati di 20px
+    adds 10px top/bottom and 20px side padding */
+    padding: 10px 20px; 
+  }  
+  
+  .section .menu 
+  {
+    /* impedisce che gli elementi precedenti flottino vicino
+    clears floats from preceding elements */
+    clear: both; 
+    /* imposta l'altezza massima a 0 per nascondere il menu
+    sets max height to 0 to hide the menu */
+    max-height: 0; 
+    /* transizione per il cambiamento di altezza
+    transition for height change */
+    transition: max-height .2s ease-in-out; 
+  }
+  
+  .section .menu-icon 
+  {
+    /* bordo rosso di 1px 
+    1px solid red border */
+    border: 1px solid rgb(255, 252, 252); 
+    /* padding di 28px sopra/sotto e 20px ai lati
+    28px top/bottom and 20px side padding */
+    padding: 28px 20px; 
+    /* posizionamento relativo per controlli interni
+    relative positioning for inner controls */
+    position: relative; 
+    /* posiziona l'icona del menu a destra
+    positions the menu icon to the right */
+    float: right;
+    /* cambia il cursore in "mano" quando si passa sopra
+    changes cursor to pointer when hovering */
+    cursor: pointer; 
+  }  
+  .section .menu-icon .nav-icon 
+  {
+    /* imposta il colore di sfondo a grigio
+    sets background color to gray */
+    background-color: gray;
+    /* rende l'icona un blocco
+    makes the icon a block element */
+    display: block; 
+    /* larghezza di 18px per la barra dell'icona
+    18px width for the icon bar */
+    width: 18px; 
+    /* altezza di 2px per una barra sottile
+    2px height for a thin bar */
+    height: 2px; 
+    /* posizione relativa rispetto al contenitore
+    relative positioning inside the container */
+    position: relative; 
+    /* transizione graduale del colore di sfondo
+    smooth transition of background color */
+    transition: background-color .2s ease-out; 
+  }
+  .section .menu-icon .nav-icon::before 
+  {
+    /* colore di sfondo grigio per la barra superiore
+    gray background for the top bar */
+    background-color: gray; 
+    /* crea contenuto vuoto per lo pseudo-elemento
+    creates empty content for the pseudo-element */
+    content: ""; 
+    /* rende lo pseudo-elemento un blocco
+    makes the pseudo-element a block */
+    display: block;
+    /* altezza al 100% dell'icona
+    sets height to 100% of the icon */
+    height: 100%; 
+    /* larghezza al 100% dell'icona 
+    sets width to 100% of the icon */
+    width: 100%; 
+    /* transizione graduale su tutte le proprietà
+    smooth transition on all properties */
+    transition: all .2s ease-out; 
+    /* posizione assoluta rispetto all'icona
+    absolutely positions relative to the icon */
+    position: absolute; 
+    /* sposta la barra verso il basso di 5px
+    moves the bar 5px down */
+    top: 5px; 
+  }
+  .section .menu-icon .nav-icon::after 
+  {
+    /* colore di sfondo grigio per la barra inferiore
+    gray background for the bottom bar */
+    background-color: gray; 
+    /* crea contenuto vuoto per lo pseudo-elemento
+    creates empty content for the pseudo-element */
+    content: ""; 
+    /* rende lo pseudo-elemento un blocco
+    makes the pseudo-element a block */
+    display: block; 
+    /* altezza al 100% dell'icona
+    sets height to 100% of the icon */
+    height: 100%; 
+    /* larghezza al 100% dell'icona
+    sets width to 100% of the icon */
+    width: 100%;
+    /* transizione graduale su tutte le proprietà
+    smooth transition on all properties */
+    transition: all .2s ease-out;
+    /* posizione assoluta rispetto all'icona
+    absolutely positions relative to the icon */
+    position: absolute; 
+    /* sposta la barra verso l'alto di 5px
+    moves the bar 5px up */
+    top: -5px; 
+  }
+  .section .menu-btn 
+  { 
+    /* nasconde il checkbox del pulsante menu 
+    hides the menu button checkbox */
+    display: none;
+  }
+  .section .menu-btn:checked ~ .menu 
+  {
+    /* imposta l'altezza massima del menu a 240px quando selezionato
+    sets max height to 240px when checked */
+    max-height: 240px; 
+  }
+  .section .menu-btn:checked ~ .menu-icon .nav-icon 
+  {
+    /* rende trasparente l'icona del menu
+    makes the menu icon transparent */
+    background-color: transparent; 
+  }
+  .section .menu-btn:checked ~ .menu-icon .nav-icon::before 
+  {
+    /* ruota la barra superiore di -45 gradi per formare una croce
+    rotates the top bar by -45 degrees to form a cross */
+    transform: rotate(-45deg); 
+    /* posiziona la barra superiore al centro
+    positions the top bar at the center */
+    top: 0; 
+  }
+  .section .menu-btn:checked ~ .menu-icon .nav-icon::after
+  {
+    /* ruota la barra inferiore di 45 gradi per completare la
+    rotates the bottom bar by 45 degrees to complete the crosscroce */
+    transform: rotate(45deg); 
+    /* posiziona la barra inferiore al centro
+    positions the bottom bar at the center */
+    top: 0; 
+  }
+}
+/*tablet*/
+@media only screen and (min-width: 768px) and (max-width:1023px)
+{
+  .section 
+  {
+    /* Utilizza Flexbox per disporre gli elementi (logo e menu) in una riga */
+    /* Uses Flexbox to align the elements (logo and menu) in a row */
+    display: flex;
+    
+    /* Distribuisce lo spazio rimanente tra il logo (a sinistra) e il menu (a destra) */
+    /* Distributes the remaining space between the logo (left) and the menu (right) */
+    justify-content: space-between;
+
+    /* Allinea verticalmente il logo e il menu al centro dell'header */
+    /* Vertically aligns the logo and menu in the center of the header */
+    align-items: center;
+
+    /* Aggiunge spazio interno (padding) all'header: 10px in alto/basso, 20px a sinistra/destra */
+    /* Adds padding to the header: 10px top/bottom, 20px left/right */
+    padding: 10px 20px;
+
+    /* Imposta il colore di sfondo dell'header (grigio scuro) */
+    /* Sets the background color of the header (dark gray) */
+    background-color: #333;
+  }
+  .section .logo
+  {
+    /* dimensione del testo logo */
+    /* font size logo */
+    font-size: 24px;
+    /*cambia il font del logo
+    changes font logo */
+    font-family: 'Great Vibes', cursive;
+    /* colore del logo */
+    /* text color of the logo */
+    color: white;
+    /* Rimuove la sottolineatura dai link (testo del logo) */
+    /* Removes the underline from the links (logo text) */
+    text-decoration: none;
+  }
+  .section .menu-btn 
+  {
+    /* Nasconde il pulsante del menu, utile per il layout mobile*/
+    /* Hides the menu button*/
+    display: none;
+  }
+  .section .menu 
+  {
+    /* Utilizza Flexbox per disporre i link del menu in una riga */
+    /* Uses Flexbox to align the menu links in a row */
+    display: flex;
+  }
+  .section .menu li 
+  {
+    /* spazio a sinistra di ogni elemento del menu*/
+    /* Adds space to the left of each menu item to separate them */
+    margin-left: 20px;
+  }
+  .section .menu li a
+  {
+    /*colore del testo dei link del menu*/
+    /* Sets the text color of the menu links*/
+    color: white;
+    /* Rimuove la sottolineatura*/
+    /* Removes the underline from the links */
+    text-decoration: none;
+    /* dimensione del testo dei link del menu */
+    /* Sets the font size of the menu links */
+    font-size: 16px;
+    /* Aggiunge padding interno ai link */
+    /* Adds internal padding to the links*/
+    padding: 10px 15px;
+    /* Imposta una transizione fluida per il cambiamento di background quando il link viene hoverato */
+    /* Sets a smooth transition for the background change when hovering over the link */
+    transition: background 0.3s;
+  }
+  .section .menu li a:hover
+  {
+    /* Cambia il colore di sfondo dei link quando vengono hoverati*/
+    /* Changes the background color of the links when hovered*/
+    background-color: rgb(55, 88, 88);
+    /* Aggiunge angoli arrotondati al background dei link hoverati */
+    /* Adds rounded corners to the background of the hovered links */
+    border-radius: 4px;
+  }
+
+}
+/*desktop*/
+@media only screen and (min-width:1024px)
+{ /*intestazione alex de poli sport& benessere ecc ecc*/
+  .header
+  {
+    background-color: aquamarine;
+  }
+  .header h1
+  {
+    font-size: 80px;
+    text-align: center;
+  }
+  .header h2
+  {
+    font-size: 50px;
+    text-align: center;
+  }
+  .header h3
+  {
+    font-size: 50px;
+    text-align: center;
+  }
+   /*barra menu con logo a sinistra*/
+  .section 
+  {
+    /* Utilizza Flexbox per disporre gli elementi (logo e menu) in una riga */
+    /* Uses Flexbox to align the elements (logo and menu) in a row */
+    display: flex;
+    
+    /* Distribuisce lo spazio rimanente tra il logo (a sinistra) e il menu (a destra) */
+    /* Distributes the remaining space between the logo (left) and the menu (right) */
+    justify-content: space-between;
+
+    /* Allinea verticalmente il logo e il menu al centro dell'header */
+    /* Vertically aligns the logo and menu in the center of the header */
+    align-items: center;
+
+    /* Aggiunge spazio interno (padding) all'header: 10px in alto/basso, 20px a sinistra/destra */
+    /* Adds padding to the header: 10px top/bottom, 20px left/right */
+    padding: 12px 30px 10px 80px;
+
+    /* Imposta il colore di sfondo dell'header (grigio scuro) */
+    /* Sets the background color of the header (dark gray) */
+    background-color: #333;
+  }
+  .section .logo
+  { 
+    /* dimensione del testo logo */
+    /* font size logo */
+    font-size: 28px;
+    /*cambia il font del logo
+    changes font logo */
+    font-family: 'Great Vibes', cursive;
+    /* colore del logo */
+    /* text color of the logo */
+    color: white;
+    /* Rimuove la sottolineatura dai link (testo del logo) */
+    /* Removes the underline from the links (logo text) */
+    text-decoration: none;
+  }
+  .section .menu-btn 
+  {
+    /* Nasconde il pulsante del menu, utile per il layout mobile*/
+    /* Hides the menu button*/
+    display: none;
+  }
+  .section .menu 
+  {
+    /* Utilizza Flexbox per disporre i link del menu in una riga */
+    /* Uses Flexbox to align the menu links in a row */
+    display: flex;
+  }
+  .section .menu li
+  {
+    /* spazio a sinistra di ogni elemento del menu*/
+    /* Adds space to the left of each menu item to separate them */
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  .section .menu li a
+  {
+    /*colore del testo dei link del menu*/
+    /* Sets the text color of the menu links*/
+    color: white;
+    /* Rimuove la sottolineatura*/
+    /* Removes the underline from the links */
+    text-decoration: none;
+    /* dimensione del testo dei link del menu */
+    /* Sets the font size of the menu links */
+    font-size: 16px;
+    /* Aggiunge padding interno ai link */
+    /* Adds internal padding to the links*/
+    padding: 10px 15px;
+    /* Imposta una transizione fluida per il cambiamento di background quando il link viene hoverato */
+    /* Sets a smooth transition for the background change when hovering over the link */
+    transition: background 0.3s;
+  }
+  .section .menu li a:hover
+  {
+    /* Cambia il colore di sfondo dei link quando vengono hoverati*/
+    /* Changes the background color of the links when hovered*/
+    background-color: rgb(55, 88, 88);
+    /* Aggiunge angoli arrotondati al background dei link hoverati */
+    /* Adds rounded corners to the background of the hovered links */
+    border-radius: 4px;
+  }
+  .section ul 
+  {
+    /* togliere il puntino dell'elenco*/
+    /*removes bullet points*/
+    list-style-type: none;
+  }
+  .central-section
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+  }
+  .box-centratore-h1
+  { 
+    margin-top: 30px;
+    font-size: 30px;
+    height: 200px;
+    width: 800px;
+  }
+  .box-orso
+  {
+    margin-top: 15%;
+  }
+  .aleskills-link
+  {
+    margin-top: 8%;
+  }
+  footer
+  {
+    margin-top: 27%;
+   background-color: #333;
+  }
+  footer .foot
+  {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  footer .foot-centre
+  {
+    background-color: #887373;
+    padding: 2px 20px;
+    text-align: center;
+    border-radius: 13px;
+  }
+}
