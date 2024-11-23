@@ -542,7 +542,7 @@
 { /*intestazione alex de poli sport& benessere ecc ecc*/
   .header
   {
-    background-color: aquamarine;
+    background-color: rgb(39, 83, 68);
   }
   .header h1
   {
@@ -651,6 +651,7 @@
   }
   .central-section
   {
+    background-color: rgba(245, 173, 107, 0.623);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -670,6 +671,8 @@
   }
   .aleskills-link
   {
+    background-color: rgba(245, 173, 107, 0.623);
+
     margin-top: 8%;
   }
   footer
